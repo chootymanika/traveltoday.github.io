@@ -1,0 +1,35 @@
+<p id="loading-message">Loading your video... Please wait...</p>
+
+<script>
+  var adLinks = [
+    "https://otieu.com/4/9925663",
+    "https://otieu.com/4/9916217",
+    "https://heartlessanthemantiquity.com/qr0wk6wq?key=c6785e0411c87cbada1a2a3615c22cb1",
+    "https://heartlessanthemantiquity.com/fxgur5xd?key=0aa323055f6fe78c03d0a46455fe5dff",
+    "https://otieu.com/4/10015960",
+    "https://otieu.com/4/9935334",
+    "https://heartlessanthemantiquity.com/t68zmaa4?key=dfb623ac2416a0fc10107814d5a8fd9c",
+    "https://heartlessanthemantiquity.com/zpc26017?key=35c523341f0bd75249833e115ca8cd7e",
+    "https://otieu.com/4/9926010",
+    "https://otieu.com/4/9926010",
+    "https://heartlessanthemantiquity.com/uidz9030fs?key=1ed2b9b880f199b1de95487e5d428382"
+
+  ];
+
+  function redirectToRandomAd() {
+    var randomIndex = Math.floor(Math.random() * adLinks.length);
+    var selectedAd = adLinks[randomIndex];
+
+    // Update the text and include the clickable link
+    var loadingMessage = document.getElementById("loading-message");
+    loadingMessage.innerHTML = `Loading your video... Please wait... If you are not redirected, <a href="${selectedAd}">click here</a>.`;
+
+    // Redirect after short delay
+    setTimeout(function () {
+      window.location.href = selectedAd;
+    }, 1500); // 1.5 seconds (adjust if needed)
+  }
+
+  // Start the process
+  redirectToRandomAd();
+</script>
